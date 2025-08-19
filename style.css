@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to left, orange, orangered);
+    border: 10px;
+    box-sizing: border-box;
+    margin: 0;
+    min-height: 100vh;
+}
+
+h1{
+    text-align: center;
+}
+
+img{
+    width: 400px;
+    margin: 0 auto;
+    display: block;
+}
+
+p{
+    text-align: center;
+}
