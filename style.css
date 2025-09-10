@@ -1,28 +1,32 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(to left, orange, orangered);
-    border: 10px;
-    box-sizing: border-box;
-    margin: 0;
-    min-height: 100vh;
-}
-
-h1{
-    text-align: center;
+    background: url(imagens/champions.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 img{
-    width: 400px;
-    margin: 0 auto;
-    display: block;
+    height: 300px;
 }
 
-p{
-    text-align: center;
+.central{
+    background-color: white;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 20px;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.central button{
+    background: black;
+    color: white;
+    width: 100px;
+    cursor: pointer;
 }
