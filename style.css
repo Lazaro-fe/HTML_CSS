@@ -1,0 +1,37 @@
+body{
+    background: url(../imagens/House.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    height: 300px;
+}
+
+.central{
+    background-color: aliceblue;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 20px;
+    align-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 10px;
+    border-radius: 15%;
+    justify-content: center;
+    gap: 15px;
+    backdrop-filter: blur(20px);
+
+}
+
+.central button{
+    background: black;
+    color: white;
+    width: 100px;
+    cursor: pointer;
+}
