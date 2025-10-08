@@ -1,0 +1,58 @@
+@font-face {
+    font-family: relogio;
+    src: url('../font/DS-DIGI.TTF');
+}
+body{
+    background-image: url(../img/sigma.jpg);
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* NOVO CONTAINER PARA ALINHAR TUDO */
+.container-geral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espaço entre o relógio e a data */
+}
+
+.centra{
+    width: 600px;
+    background: rgba(248, 248, 255, 0.22);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.centra div{
+    background: rgba(0, 0, 0, 0.226);
+    color: rgba(0, 0, 0, 0.774);
+    height: 350px;
+    width: 200px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.centra span{
+    font-size: 100px;
+    font-family: relogio;
+}
+
+/* ESTILO PARA A DATA */
+.data-container span {
+    font-family: relogio;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
