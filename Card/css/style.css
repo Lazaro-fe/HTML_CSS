@@ -1,0 +1,113 @@
+/* Alterando o tamanho da letra do texto e do título */
+
+*{
+    font-family: 'Poppins', sans-serif; /* Define o tipo de fonte que será usada */
+    margin: 0; /* Removendo as margens padrão do Navegador */
+    padding: 0; /* Removendo preenchimento padrão do Navegador */
+    box-sizing: border-box; /* Garante que o padding e o margin não aumente o tamanho do elemento */
+}
+
+/* Alterando o background, o tamnho da imagem e a margem  */
+body{
+    display: flex; /* Alinhamento dos Itens */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    min-height: 100vh; /* Garante que o corpo ocupe 100% da altura da viewport para permitir a centralização vertical */
+    background-color: #313131; /* Define a cor de fundo */
+}
+
+
+.card{
+    display: flex; /* Habilita o Flexbox para organizar os elementos internos (icon, content, button) em coluna */
+    flex-direction: column; /* Define a direção principal como coluna */
+    justify-content: center; /* Alinha o conteúdo ao centro (em relação ao eixo principal, que é vertical neste caso) */
+    width: 300px; /* Define a largura fixa do card */
+    padding: 25px; /* Adiciona preenchimento interno */
+    background-color: #313131; /* Define a cor de fundo do card (igual ao body, o que parece ser um erro de design original) */
+    text-align: justify; /* Alinha o texto para justificado */
+    box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.389); /* Adiciona uma sombra suave ao card */
+    position: relative; /* Permite posicionamento absoluto de elementos filhos (.card::before) em relação ao card */
+}
+
+.card::before{
+    content: ''; /* Conteúdo vazio necessário para gerar o elemento visual */
+    position: absolute; /* Permite posicionar o elemento de forma absoluta dentro do card */
+    top: 0; /* Alinha ao topo */
+    right: 0; /* Alinha à direita */
+    border: 20px solid transparent; /* Cria um triângulo usando bordas transparentes */
+    border-top: 20px #06d62e; /* Define a borda superior do triângulo na cor verde */
+    border-right: 20px solid #06d62e; /* Define a borda direita do triângulo na cor verde (cria o canto colorido) */
+}
+
+.icon{
+    margin-bottom: 20px; /* Adiciona margem abaixo da imagem para separação */
+}
+
+.icon img{
+    width: 250px; /* Define a largura da imagem do ícone */
+}
+
+.content{
+    height: 215px; /* Define uma altura máxima para o conteúdo quando "fechado" */
+    overflow: hidden; /* Oculta o conteúdo que excede a altura definida (cria o efeito de "Read More") */
+    position: relative; /* Permite posicionamento absoluto de elementos filhos (.content::before) em relação ao content */
+}
+
+.content::before{
+    content: ''; /* Conteúdo vazio necessário para gerar o elemento visual */
+    position: absolute; /* Permite posicionar o elemento de forma absoluta dentro do content */
+    bottom: 0; /* Alinha o elemento na parte inferior do content */
+    width: 100%; /* Ocupa 100% da largura do content */
+    height: 100px; /* Define a altura do gradiente */
+    background: linear-gradient(transparent, #3f3f3f) /* Cria um gradiente transparente para a cor de fundo, simulando um desvanecimento do texto */
+}
+
+.content h3{
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 15px; /* Adiciona margem abaixo do título */
+    font-size: 20px; /* Define o tamanho da fonte do título */
+    position: relative; /* Permite posicionamento absoluto de elementos filhos (.content h3::before) em relação ao h3 */
+}
+
+.content h3::before{
+    content: ''; /* Conteúdo vazio necessário para gerar o elemento visual (a linha verde) */
+    position: absolute; /* Permite posicionar o elemento de forma absoluta dentro do h3 */
+    height: 2px; /* Define a altura da linha */
+    width: 40px; /* Define a largura da linha */
+    background-color: #06d62e; /* Define a cor da linha */
+    bottom: 4px; /* Posiciona a linha ligeiramente acima da parte inferior do h3 */
+    border-radius: 100px; /* Centraliza a linha horizontalmente sob o texto */
+}
+
+.content p{
+    color: #b7b7b7; /* Define a cor do texto do parágrafo */
+}
+
+.read_button{
+    border: none; /* Remove a borda padrão do botão */
+    padding: 10px; /* Adiciona preenchimento interno */
+    border-radius: 2px; /* Arredonda as bordas */
+    margin-top: 15px; /* Adiciona margem acima do botão */
+    background-color: #06d62e; /* Define a cor de fundo do botão */
+    color: #313131; /* Define a cor do texto (cor de fundo do card/body) */
+    font-weight: bold; /* Define a fonte como negrito */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    font-size: 16px; /* Define o tamanho da fonte */
+    transition: all 0.2s ease-in-out; /* Adiciona uma transição suave para os efeitos de hover */
+}
+
+.read_button:hover{
+    background-color: transparent; /* Remove a cor de fundo ao passar o mouse */
+    color: #06d62e; /* Define a cor do texto ao passar o mouse */
+    transition: all 0.2s ease-in-out; /* Repete a transição */
+}
+
+/* Estado Ativo: Quando a classe 'active' é adicionada ao card */
+.card.active .content{
+    height: auto; /* Remove o limite de altura, permitindo que o conteúdo completo seja exibido */
+}
+
+/* Estado Ativo: Quando a classe 'active' é adicionada ao card */
+.card.card.active .content::before{
+    visibility: hidden; /* Torna o efeito de desvanecimento (gradiente) invisível */
+}
