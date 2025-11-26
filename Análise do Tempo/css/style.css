@@ -1,0 +1,44 @@
+body{
+    height: 100vh;
+    background: url('../imagem/Tempo.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.central{
+    width: 500px;
+    background: rgba(0, 0, 0, 0.256);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.central input{
+    width: 350px;
+    height: 20px;
+    &:focus{
+        outline: 1px solid gray;
+        background: black;
+        color: white;
+    }
+}
+
+.central button{
+    width: 100px;
+    height: 50px;
+    background: black;
+    color: white;
+    &:hover{
+        cursor: pointer;
+        color: red;
+    }
+}
+
+.central p{
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
