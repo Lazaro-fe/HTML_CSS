@@ -1,6 +1,6 @@
 body{
     height: 100vh;
-    background: url('../imagem/Tempo.jpg');
+    background: url('../imagens/tempo.jpeg');
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -40,5 +40,4 @@ body{
 .central p{
     font-size: 25px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
 }
