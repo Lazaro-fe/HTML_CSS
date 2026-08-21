@@ -1,0 +1,32 @@
+/* Aqui começa o Root CSS */
+
+:root {
+
+    --pretoacinzentado: #1E2026
+    --azuldio: #035AA6
+    --azuloce: #13C9F2
+    --azulceu: #13DCF2
+    --verderanco: #E7F5E4
+}
+
+/* ---------------------- */
+
+h1{
+    font-size: 65px;
+    text-align: center;
+    color: var(--pretoacinzentado);
+}
+
+h2{
+    font-size: 38px;
+    text-align: center;
+}
+
+hr{
+    width: 70%;
+    height: 3px;
+}
+
+p{
+    width: 70%;
+}
